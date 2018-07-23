@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- To ensure proper rendering and touch zooming in mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">  
+<title>Airbliss</title>
+
+<!-- Google fonts -->
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+
+<!-- font awesome -->
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- bootstrap -->
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+
+<!-- animate.css -->
+<link rel="stylesheet" href="assets/animate/animate.css" />
+<link rel="stylesheet" href="assets/animate/set.css" />
+
+<!-- gallery -->
+<link rel="stylesheet" href="assets/gallery/blueimp-gallery.min.css">
+
+<!-- favicon -->
+<link rel="shortcut icon" href="images/airbliss favicon.ico" type="image/x-icon">
+<link rel="icon" href="images/airbliss favicon.ico" type="image/x-icon">
+
+
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/style2.css">
+</head>
+
+
+
+<body data-spy="scroll" data-target=".navbar" data-offset="80">
+
+<div class="topbar animated fadeInLeftBig"></div>
+
+
+<!-- Header Starts -->
+<div class="navbar-wrapper">
+      <div class="container">
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation" id="top-nav">
+          <div class="container">
+            <div class="navbar-header">
+              <!-- Logo Starts -->
+              <a class="navbar-brand" href="./index.html"> <img src="images/airbliss.png" alt="Airbliss" width="230px" height="72px"></a>
+              <!-- #Logo Ends -->
+
+
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+            </div>
+
+
+            <!-- Nav Starts -->
+            <div class="navbar-collapse  collapse">
+              <ul class="nav navbar-nav navbar-right scroll">
+                 <li><a href="./index.html">Home</a></li>
+             <!--    <li><a href="#about">About Us</a></li> -->
+                 <li><a style = "color:#21ca29;" href="./bookVisit.html">Book a Visit</a></li>
+            <!-- <li ><a href="#partners">Partners</a></li> -->
+             <!--    <li><a href="#contact">Contact Us</a></li>                 -->
+              </ul>
+            </div>
+            <!-- #Nav Ends -->
+
+          </div>
+        </div>
+
+      </div>
+  </div>
+<!-- #Header Ends -->
+
+
+<div class="container contact_div" id="book_form">  
+  <form id="contact" action="" method="post">
+    <h3>Book a Visit</h3>
+    
+    <div class="progress">
+     <div id="progress_bar" class="progress-bar progress-bar-success progress-bar-striped" role="progressbar"
+  aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+      <span ><b id = "progressLabel">0% Complete</b> </span>
+     </div>
+    </div>
+
+ <!--   <fieldset>
+      <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Your Email Address" type="email" tabindex="2" required>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3" required>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Your Web Site (optional)" type="url" tabindex="4" required>
+    </fieldset>
+    <fieldset>
+      <textarea placeholder="Type your message here...." tabindex="5" required></textarea>
+    </fieldset>
+    <fieldset>
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+    </fieldset>   -->
+    
+   <div id="question_area"> 
+    
+   </div>
+    
+  </form>
+</div>
+
+
+
+<!-- Form - 1st Question -->
+  <div id="question1" style="display:none;"> 
+   <div style = "background:#ffffff; padding:30px 10px 40px; margin-top:30px;">
+     <h4><b>What Services Do You Need?</b></h4>
+    
+     <input type="radio" name="choice" value="Option1" checked> <label class="radio_label" >Option1</label> <br/>
+     <input type="radio" name="choice" value="Option2"> <label class="radio_label">Option2</label> <br/>    
+    </div>
+    
+    <div style = "margin-top:25px;" class="row wowload fadeInLeftBig">
+         <div class="col-sm-6">      
+             <button disabled name="back" class="submit_but" data-submit="...Loading"><span class="fa fa-arrow-left"> Back</span></button>
+         </div>
+         
+         <div class="col-sm-6">      
+             <button name="submit" type="button" class="submit_but" onclick="changeToQues2()" data-submit="...Loading">Next <span class="fa fa-arrow-right"></span></button>
+         </div>
+    </div>
+  </div>  
+
+
+
+<!-- Form - 2nd Question -->
+  <div id="question2" style="display:none;"> 
+    
+    <div style = "background:#ffffff; padding:30px 10px 40px; margin-top:30px;">
+     <h4><b>Enter Your Name</b></h4>
+    
+     <fieldset>
+      <input id="name" placeholder="Your name" type="text" tabindex="1" required autofocus>
+     </fieldset> 
+    </div>
+    
+    <div style = "margin-top:25px;" class="row wowload fadeInLeftBig">
+         <div class="col-sm-6">      
+             <button name="back" type="button" onclick="changeToQues1()" class="submit_but" data-submit="...Loading"><span class="fa fa-arrow-left"> Back</span></button>
+         </div>
+         
+         <div class="col-sm-6">      
+             <button name="submit" type="submit" onclick="changeToAck()" data-submit="...Loading">Next <span class="fa fa-arrow-right"></span></button>
+         </div>
+    </div>
+    
+  </div>
+   
+
+<!-- Form - Acknowledgement message -->
+  <div id="ack" style="display:none;"> 
+    
+    <div style = "background:#ffffff; padding:30px 10px 40px; margin-top:30px;">
+     <h4 style="text-align:center"><b>Entry Done Successfully</b></h4>
+    </div>
+    
+  </div>
+
+
+
+<script>
+
+document.getElementById('question_area').innerHTML = document.getElementById('question1').innerHTML;
+
+
+function changeToQues2()
+{
+   document.getElementById('question_area').innerHTML = document.getElementById('question2').innerHTML;
+ //document.getElementById('progress_bar').aria-valuenow = "50";
+   document.getElementById('progress_bar').style.width = "50%";   
+   document.getElementById('progressLabel').innerHTML = "50% Complete";
+}
+
+
+function changeToQues1()
+{
+   document.getElementById('question_area').innerHTML = document.getElementById('question1').innerHTML;
+   document.getElementById('progress_bar').style.width = "0%";   
+   document.getElementById('progressLabel').innerHTML = "0% Complete";
+}
+
+
+function changeToAck()
+{
+   var x = document.getElementById('name').value;
+   
+   if(x.length != 0)
+   {   document.getElementById('question_area').innerHTML = document.getElementById('ack').innerHTML;
+       document.getElementById('progress_bar').style.width = "100%";   
+       document.getElementById('progressLabel').innerHTML = "100% Complete";
+   }
+}
+
+</script>
+
+
+<!-- Footer Starts -->
+ <div class="footer text-center">
+  &copy Airbliss 2016  All rights reserved
+ </div>
+<!-- # Footer Ends -->
+
+
+</body>
+
+</html>
